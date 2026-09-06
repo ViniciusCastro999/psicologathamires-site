@@ -5,12 +5,13 @@ Atendimento online, por chamada de vídeo.
 
 ## Sobre
 
-Página única (`index.html`), sem dependências de build. Toda a estilização e as
-ilustrações (SVG) estão embutidas no próprio arquivo; as únicas requisições
-externas são as fontes do Google Fonts (Fraunces, Mulish e Caveat).
+Página única (`index.html`), sem dependências de build. Todo o CSS e os
+ícones (SVG) estão embutidos no próprio arquivo; as únicas requisições
+externas são as fontes do Google Fonts (Fraunces, Mulish e Caveat) e a
+foto `thamires.jpg`.
 
-- Identidade visual derivada dos posts do Instagram [@psithamires.castro](https://www.instagram.com/psithamires.castro/)
-- Paleta nude/blush com acento coral-rosé
+- Paleta nude/coral calcada nos posts do Instagram [@psithamires.castro](https://www.instagram.com/psithamires.castro/)
+- Foto de Thamires no topo (`thamires.jpg`)
 - Tema claro e escuro
 - CTA principal para o WhatsApp **(35) 99884-5491**
 
@@ -31,5 +32,5 @@ Settings → Pages → Branch: `main` / `/root`. O site fica em
 
 ```
 index.html        página completa
-referencia/       posts originais do Instagram usados como referência visual
+thamires.jpg      foto usada no topo
 ```
