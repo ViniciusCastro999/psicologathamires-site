@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Thamires Castro · Psicóloga</title>
 <meta name="description" content="Psicóloga clínica Thamires Castro. Atendimento online, CRP 04/71409.">
 <meta name="theme-color" content="#d9574f">
@@ -29,7 +34,9 @@
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body { overflow-x: clip; }
+  img { max-width: 100%; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
@@ -308,7 +315,31 @@
     dialog.wa-modal[open] { animation: waPop .22s cubic-bezier(.2,.7,.3,1); }
     @keyframes waPop { from { opacity: 0; transform: translateY(8px) scale(.97); } }
   }
+
+  /* ---------- ajustes mobile ---------- */
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .wrap, .narrow { width: calc(100% - 2.4rem); }
+    .bar { gap: .6rem; }
+    .mark { font-size: .95rem; gap: .5rem; }
+    .mark img { width: 30px; height: 30px; }
+    header .btn { padding: .55rem .9rem; font-size: .8rem; }
+    .hero { padding-top: 2.4rem; }
+    .hero h1 { font-size: clamp(2rem, 8.5vw, 2.6rem); }
+    .hero .script { font-size: clamp(2.3rem, 10vw, 3rem); }
+    .hero p.lead { font-size: 1.05rem; }
+    .hero .actions { gap: .7rem; }
+    .hero .actions .btn { flex: 1 1 100%; justify-content: center; }
+    .portrait { width: min(360px, 88vw); }
+    .leaf.tl { left: -6px; width: 42px; }
+    .leaf.br { right: 4px; width: 52px; bottom: -16px; }
+    .portrait .badge { right: 0; }
+    .sec-head h2 { font-size: clamp(1.7rem, 6.5vw, 2.1rem); }
+    .band .script { font-size: clamp(2rem, 8vw, 2.7rem); }
+  }
 </style>
+</head>
+<body>
 
 <header>
   <div class="wrap bar">
@@ -602,3 +633,6 @@
   });
 })();
 </script>
+
+</body>
+</html>
