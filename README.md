@@ -12,7 +12,7 @@ foto `thamires.jpg`.
 
 - Paleta nude/coral calcada nos posts do Instagram [@psithamires.castro](https://www.instagram.com/psithamires.castro/)
 - Foto de Thamires no topo (`thamires.jpg`)
-- Tema claro e escuro
+- Identidade visual única, quente (nude/coral), sem tema escuro
 - CTA principal para o WhatsApp **(35) 99884-5491**
 
 ## Como visualizar

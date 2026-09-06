@@ -5,50 +5,23 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Mulish:wght@400;500;600;700&family=Caveat:wght@600&display=swap">
 
 <style>
+  /* Identidade única e quente, calcada nos posts do Instagram. Sem tema escuro. */
   :root {
-    --paper:        #efd4c1;
-    --paper-2:      #e7c5ae;
-    --card:         #f8e8d9;
-    --ink:          #2b201a;
-    --ink-soft:     #8a6a5a;
-    --coral:        #d6545a;
-    --coral-deep:   #b02f46;
-    --blush:        #e7a79e;
-    --blush-soft:   #eeb2a3;
-    --line:         #d8bca2;
-    --shadow:       28px 28px 60px -30px rgba(89, 54, 40, .45);
+    color-scheme: light;
+    --paper:        #f4ddca;
+    --paper-2:      #eecdb8;
+    --card:         #fcefe3;
+    --ink:          #402d22;
+    --ink-soft:     #8c6a57;
+    --coral:        #d9574f;
+    --coral-deep:   #b23c3a;
+    --blush:        #e8a89d;
+    --blush-soft:   #f1bda9;
+    --line:         #ddc1a6;
+    --shadow:       28px 28px 60px -30px rgba(120, 70, 45, .38);
     --ff-display: "Fraunces", "Georgia", serif;
     --ff-body: "Mulish", -apple-system, "Segoe UI", sans-serif;
     --ff-script: "Caveat", "Fraunces", cursive;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --paper:      #241a15;
-      --paper-2:    #2d211b;
-      --card:       #33251e;
-      --ink:        #f3e4d7;
-      --ink-soft:   #c3a595;
-      --coral:      #e6867e;
-      --coral-deep: #f0a69c;
-      --blush:      #cf827b;
-      --blush-soft: #6f463e;
-      --line:       #48352c;
-      --shadow:     28px 28px 70px -30px rgba(0, 0, 0, .6);
-    }
-  }
-  :root[data-theme="dark"] {
-    --paper:      #241a15;
-    --paper-2:    #2d211b;
-    --card:       #33251e;
-    --ink:        #f3e4d7;
-    --ink-soft:   #c3a595;
-    --coral:      #e6867e;
-    --coral-deep: #f0a69c;
-    --blush:      #cf827b;
-    --blush-soft: #6f463e;
-    --line:       #48352c;
-    --shadow:     28px 28px 70px -30px rgba(0, 0, 0, .6);
   }
 
   * { box-sizing: border-box; }
@@ -212,8 +185,6 @@
 
   /* ---------- quote band ---------- */
   .band { background: var(--coral); color: #fff3ee; text-align: center; }
-  :root[data-theme="dark"] .band, :root:not([data-theme="light"]) .band { color: #24100f; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .band { color: #24100f; } }
   .band .narrow { padding-block: 1rem; }
   .band .script { color: inherit; font-size: clamp(2.3rem, 5.6vw, 3.6rem); line-height: 1.05; display: block; margin-bottom: .1rem; }
   .band p.attr { margin-top: 1.6rem; font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; opacity: .8; }
@@ -364,7 +335,7 @@
   <section class="about" id="temas" style="border-bottom:none">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Podemos cuidar juntas de</p>
+        <p class="eyebrow">Podemos cuidar juntos de</p>
         <h2>O que costuma trazer alguém à terapia</h2>
         <p>Se o que você vive não está nesta lista, ainda assim vale conversar.</p>
       </div>
@@ -422,7 +393,7 @@
         </details>
         <details>
           <summary>Por quanto tempo vou precisar fazer terapia?</summary>
-          <p>Não há um prazo fixo. Alguns processos são mais breves e focados; outros se estendem por mais tempo. Revisamos juntas, ao longo do caminho, como você está se sentindo e o que faz sentido para você.</p>
+          <p>Não há um prazo fixo. Alguns processos são mais breves e focados; outros se estendem por mais tempo. Revisamos juntos, ao longo do caminho, como você está se sentindo e o que faz sentido para você.</p>
         </details>
         <details>
           <summary>O que eu conto fica em sigilo?</summary>
@@ -441,7 +412,7 @@
       <div class="contact-card">
         <div>
           <p class="eyebrow">Vamos conversar</p>
-          <h2>Quando você estiver pronta, eu estou aqui</h2>
+          <h2>Quando você quiser começar, eu estou aqui</h2>
           <p>Dar o primeiro passo costuma ser a parte mais difícil. Me manda uma mensagem, sem compromisso, e a gente combina a primeira conversa.</p>
         </div>
         <div class="contact-list">
