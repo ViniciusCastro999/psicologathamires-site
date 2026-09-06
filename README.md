@@ -13,7 +13,7 @@ index.html              página completa (HTML + CSS embutidos, sem build)
 assets/
   thamires-1.jpg        foto do topo
   thamires-2.jpg        foto da seção "Como funciona"
-  favicon.svg           ícone da aba
+  favicon.png           ícone da aba (balão + coração)
   apple-touch-icon.png  ícone iOS
   icon-512.png          ícone grande (PWA / compartilhamento)
 CNAME                   domínio personalizado (adicionado quando o DNS propagar)
