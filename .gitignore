@@ -2,5 +2,4 @@
 Thumbs.db
 node_modules/
 *.log
-*.PNG
-ChatGPT Image*.png
+_source/
