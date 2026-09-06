@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Thamires Castro Psicologia">
+  <rect width="64" height="64" rx="15" fill="#d9574f"/>
+  <path d="M32 51C17.5 40.6 11 32.2 11 23.2A11.2 11.2 0 0 1 32 17a11.2 11.2 0 0 1 21 6.2c0 9-6.5 17.4-21 27.8Z" fill="#fbeee2"/>
+  <path d="M32 46V25M32 34c-3.4 0-6.2-2.1-7.4-5.2M32 30c2.9 0 5.4-1.6 6.8-4.1" fill="none" stroke="#d9574f" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
