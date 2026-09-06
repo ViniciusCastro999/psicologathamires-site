@@ -262,6 +262,46 @@
     .rise { animation: rise .7s cubic-bezier(.2,.7,.3,1) both; }
     @keyframes rise { from { opacity: .55; transform: translateY(14px); } to { opacity: 1; transform: none; } }
   }
+
+  /* ---------- modal do WhatsApp ---------- */
+  dialog.wa-modal {
+    border: none; padding: 0;
+    width: min(30rem, calc(100vw - 2.5rem)); border-radius: 24px;
+    background: var(--card); color: var(--ink);
+    box-shadow: 0 40px 90px -25px rgba(70, 40, 25, .55);
+  }
+  dialog.wa-modal::backdrop { background: rgba(43, 32, 26, .55); }
+  @supports (backdrop-filter: blur(2px)) { dialog.wa-modal::backdrop { backdrop-filter: blur(3px); } }
+  .wa-inner { padding: 1.7rem 1.7rem 1.8rem; }
+  .wa-inner h2 { font-family: var(--ff-display); font-size: 1.45rem; font-weight: 500; }
+  .wa-inner .wa-lead { margin-top: .5rem; font-size: .93rem; color: var(--ink-soft); }
+  .wa-form { margin-top: 1.3rem; display: grid; gap: 1rem; }
+  .wa-form label {
+    display: block; margin-bottom: .4rem; font-size: .74rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .wa-form input, .wa-form select {
+    width: 100%; font: inherit; font-size: 1rem; padding: .72rem .9rem;
+    border: 1.5px solid var(--line); border-radius: 12px;
+    background: var(--paper); color: var(--ink); -webkit-appearance: none; appearance: none;
+  }
+  .wa-form select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238c6a57' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right .9rem center; padding-right: 2.6rem;
+  }
+  .wa-form input:focus, .wa-form select:focus { outline: none; border-color: var(--coral); box-shadow: 0 0 0 3px color-mix(in srgb, var(--coral) 22%, transparent); }
+  .wa-actions { display: flex; gap: .7rem; margin-top: .3rem; }
+  .wa-actions .btn { flex: 1; justify-content: center; padding-inline: 1rem; }
+  .wa-close {
+    position: absolute; top: .85rem; right: .85rem; z-index: 1;
+    border: none; background: transparent; color: var(--ink-soft);
+    cursor: pointer; padding: .35rem; border-radius: 9px; line-height: 0;
+  }
+  .wa-close:hover { background: var(--paper); color: var(--ink); }
+  @media (prefers-reduced-motion: no-preference) {
+    dialog.wa-modal[open] { animation: waPop .22s cubic-bezier(.2,.7,.3,1); }
+    @keyframes waPop { from { opacity: 0; transform: translateY(8px) scale(.97); } }
+  }
 </style>
 
 <header>
@@ -279,7 +319,7 @@
       <a href="#temas">Temas</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a class="btn btn-primary" href="https://wa.me/5535998845491?text=Ol%C3%A1%2C%20Thamires%20Castro.%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos." target="_blank" rel="noopener">Agendar sessão</a>
+    <a class="btn btn-primary" data-wa href="https://wa.me/5535998845491?text=Ol%C3%A1%2C%20Thamires%20Castro.%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos." target="_blank" rel="noopener">Agendar sessão</a>
   </div>
 </header>
 
@@ -292,7 +332,7 @@
         <h1>A cura começa quando você<span class="script">se permite sentir</span></h1>
         <p class="lead">Um espaço de escuta cuidadosa para adultos que querem entender o que sentem, atravessar fases difíceis e voltar a se reconhecer.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/5535998845491?text=Ol%C3%A1%2C%20Thamires%20Castro.%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos." target="_blank" rel="noopener">
+          <a class="btn btn-primary" data-wa href="https://wa.me/5535998845491?text=Ol%C3%A1%2C%20Thamires%20Castro.%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos." target="_blank" rel="noopener">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.8 0 1.1Z"/></svg>
             (35) 99884-5491
           </a>
@@ -446,7 +486,7 @@
           <p>Dar o primeiro passo costuma ser a parte mais difícil. Me manda uma mensagem, sem compromisso, e a gente combina a primeira conversa.</p>
         </div>
         <div class="contact-list">
-          <a href="https://wa.me/5535998845491?text=Ol%C3%A1%2C%20Thamires%20Castro.%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos." target="_blank" rel="noopener">
+          <a data-wa href="https://wa.me/5535998845491?text=Ol%C3%A1%2C%20Thamires%20Castro.%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos." target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.8 0 1.1Z"/></svg>
             <span>WhatsApp<small>(35) 99884-5491</small></span>
           </a>
@@ -478,3 +518,87 @@
     Este site tem caráter informativo e não substitui uma consulta psicológica.</p>
   </div>
 </footer>
+
+<dialog id="waDialog" class="wa-modal" aria-labelledby="waTitle">
+  <button type="button" class="wa-close" data-wa-close aria-label="Fechar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <div class="wa-inner">
+    <h2 id="waTitle">Vamos conversar</h2>
+    <p class="wa-lead">Me diz seu nome pra eu já saber com quem estou falando. Você vai para o WhatsApp com a mensagem escrita.</p>
+    <form class="wa-form" id="waForm">
+      <div>
+        <label for="waName">Seu nome</label>
+        <input id="waName" name="nome" type="text" autocomplete="given-name" required maxlength="60" placeholder="Como posso te chamar?">
+      </div>
+      <div>
+        <label for="waSubject">Sobre o que você quer falar? (opcional)</label>
+        <select id="waSubject" name="assunto">
+          <option value="">Prefiro contar na conversa</option>
+          <option>Ansiedade</option>
+          <option>Autoestima</option>
+          <option>Relacionamentos</option>
+          <option>Luto e perdas</option>
+          <option>Estresse e esgotamento</option>
+          <option>Autoconhecimento</option>
+          <option value="outro assunto">Outro assunto</option>
+        </select>
+      </div>
+      <div class="wa-actions">
+        <button type="button" class="btn btn-ghost" data-wa-close>Cancelar</button>
+        <button type="submit" class="btn btn-primary">Abrir o WhatsApp</button>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var dlg = document.getElementById('waDialog');
+  var triggers = document.querySelectorAll('[data-wa]');
+  if (!dlg || !triggers.length || typeof dlg.showModal !== 'function') return; // sem suporte: os links abrem o wa.me direto
+
+  var form = document.getElementById('waForm');
+  var nameInput = document.getElementById('waName');
+  var subject = document.getElementById('waSubject');
+  var phone = '5535998845491';
+  var opener = null;
+
+  triggers.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      opener = el;
+      dlg.showModal();
+      setTimeout(function () { nameInput.focus(); }, 30);
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nome = nameInput.value.trim().replace(/\s+/g, ' ');
+    if (!nome) { nameInput.focus(); return; }
+    var msg = 'Olá, Thamires Castro! Meu nome é ' + nome + ' e vim pelo site. ';
+    msg += subject.value
+      ? 'Gostaria de conversar sobre ' + subject.value.toLowerCase() + '.'
+      : 'Gostaria de saber mais informações sobre os atendimentos.';
+    window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    dlg.close();
+  });
+
+  dlg.addEventListener('close', function () {
+    form.reset();
+    if (opener && opener.focus) opener.focus();
+    opener = null;
+  });
+
+  dlg.querySelectorAll('[data-wa-close]').forEach(function (b) {
+    b.addEventListener('click', function () { dlg.close(); });
+  });
+
+  dlg.addEventListener('click', function (e) {
+    var box = dlg.getBoundingClientRect();
+    var inside = e.clientX >= box.left && e.clientX <= box.right && e.clientY >= box.top && e.clientY <= box.bottom;
+    if (!inside) dlg.close();
+  });
+})();
+</script>
