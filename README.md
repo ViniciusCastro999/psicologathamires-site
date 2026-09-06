@@ -1,6 +1,6 @@
 # psithamires-site
 
-Landing page da psicóloga clínica **Thamires Castro** — CRP 04/71409.
+Landing page da psicóloga clínica **Thamires Castro**, CRP 04/71409.
 Atendimento online, por chamada de vídeo.
 
 ## Sobre
