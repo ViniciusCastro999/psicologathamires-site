@@ -11,7 +11,8 @@ externas são as fontes do Google Fonts (Fraunces, Mulish e Caveat) e a
 foto `thamires.jpg`.
 
 - Paleta nude/coral calcada nos posts do Instagram [@psithamires.castro](https://www.instagram.com/psithamires.castro/)
-- Foto de Thamires no topo (`thamires.jpg`)
+- Fotos de Thamires (`thamires1.jpg` no topo, `thamires2.jpg` em "Como funciona")
+- Ícone próprio (`favicon.svg`, `apple-touch-icon.png`)
 - Identidade visual única, quente (nude/coral), sem tema escuro
 - CTA principal para o WhatsApp **(35) 99884-5491**
 
@@ -32,5 +33,7 @@ Settings → Pages → Branch: `main` / `/root`. O site fica em
 
 ```
 index.html        página completa
-thamires.jpg      foto usada no topo
+thamires1.jpg     foto do topo
+thamires2.jpg     foto da seção "Como funciona"
+favicon.svg       ícone da aba
 ```

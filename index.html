@@ -100,11 +100,12 @@
 
   /* ---------- hero ---------- */
   .hero { padding: clamp(3rem, 8vw, 6rem) 0 clamp(3rem, 7vw, 5.5rem); }
-  .hero-grid { display: grid; gap: clamp(2.5rem, 6vw, 4.5rem); align-items: center; }
-  @media (min-width: 920px) { .hero-grid { grid-template-columns: 1.15fr .85fr; } }
-  .hero h1 { font-size: clamp(2.5rem, 6.2vw, 4rem); font-weight: 400; letter-spacing: -.01em; }
+  .hero-grid { display: grid; gap: clamp(2.5rem, 5vw, 4rem); align-items: center; }
+  @media (min-width: 920px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1180px) { .hero-grid { grid-template-columns: 1.05fr .95fr; } }
+  .hero h1 { font-size: clamp(2.4rem, 5.6vw, 3.7rem); font-weight: 400; letter-spacing: -.01em; }
   .hero h1 em { font-style: normal; }
-  .hero .script { font-size: clamp(3rem, 7.6vw, 4.9rem); display: inline-block; line-height: .9; }
+  .hero .script { font-size: clamp(2.9rem, 6.6vw, 4.3rem); display: inline-block; line-height: .9; }
   .hero p.lead { margin-top: 1.6rem; font-size: 1.12rem; color: var(--ink-soft); max-width: 46ch; }
   .hero .actions { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: .9rem; }
   .hero .meta { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-size: .82rem; font-weight: 600; letter-spacing: .04em; color: var(--ink-soft); }
@@ -112,7 +113,7 @@
   .hero .meta b { color: var(--coral-deep); font-weight: 700; }
 
   .portrait {
-    position: relative; margin-inline: auto; width: min(360px, 78vw);
+    position: relative; margin-inline: auto; width: min(470px, 84vw);
   }
   .portrait .frame {
     position: relative; border-radius: 50% 50% 20% 20% / 40% 40% 10% 10%;
@@ -161,9 +162,29 @@
     text-transform: uppercase; color: var(--ink-soft);
   }
 
+  /* ---------- como funciona ---------- */
+  .howto-grid { display: grid; gap: clamp(2.2rem, 5vw, 3.8rem); align-items: center; }
+  @media (min-width: 900px) { .howto-grid { grid-template-columns: .8fr 1.2fr; } }
+  .howto-photo { position: relative; }
+  .howto-photo img {
+    display: block; width: 100%; height: auto; aspect-ratio: 4 / 5;
+    object-fit: cover; object-position: 50% 28%;
+    border-radius: 49% 49% 17% 17% / 39% 39% 9% 9%;
+    box-shadow: var(--shadow);
+    border: 10px solid var(--card);
+  }
+  .howto-head { margin-bottom: 2rem; max-width: none; }
+
   /* ---------- steps ---------- */
   .steps { display: grid; gap: 1.4rem; counter-reset: step; }
   @media (min-width: 780px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+  .steps-stack, .steps-stack.steps { grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 620px) {
+    .steps-stack .step { display: grid; grid-template-columns: auto 1fr; column-gap: 1.15rem; align-items: start; padding: 1.4rem 1.6rem; }
+    .steps-stack .step::before { margin-bottom: 0; }
+    .steps-stack .step h3 { align-self: center; }
+    .steps-stack .step p { grid-column: 2; }
+  }
   .step {
     position: relative; background: var(--card); border: 1px solid var(--line);
     border-radius: 20px; padding: 1.9rem 1.5rem 1.6rem;
@@ -290,7 +311,7 @@
           <path d="M30 60c8-4 14-12 16-22M26 40c-6-3-10-9-11-17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
         </svg>
         <div class="frame">
-          <img src="thamires.jpg" width="900" height="1200" alt="Thamires Castro, psicóloga, sorrindo ao ar livre">
+          <img src="thamires1.jpg" width="975" height="1300" alt="Thamires Castro, psicóloga, sorrindo ao ar livre">
         </div>
         <svg class="leaf br" viewBox="0 0 80 80" fill="none" aria-hidden="true">
           <path d="M40 74C18 66 8 44 12 22c1-6 4-12 4-12s18 8 26 26c6 14 4 30 4 30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
@@ -313,24 +334,29 @@
   </section>
 
   <section id="atendimento">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Como funciona</p>
-        <h2>Um caminho simples até a primeira conversa</h2>
-        <p>Atendimento 100% online, por chamada de vídeo, de onde você estiver.</p>
+    <div class="wrap howto-grid">
+      <div class="howto-photo">
+        <img src="thamires2.jpg" width="975" height="1150" alt="Thamires Castro ao ar livre, em um campo">
       </div>
-      <div class="steps">
-        <div class="step">
-          <h3>Primeiro contato</h3>
-          <p>Você me envia uma mensagem no WhatsApp. Conversamos sobre o que está buscando e eu explico como funciona a terapia.</p>
+      <div>
+        <div class="sec-head howto-head">
+          <p class="eyebrow">Como funciona</p>
+          <h2>Um caminho simples até a primeira conversa</h2>
+          <p>Atendimento 100% online, por chamada de vídeo, de onde você estiver.</p>
         </div>
-        <div class="step">
-          <h3>Sessão inicial</h3>
-          <p>Nos encontramos por vídeo para nos conhecermos. É o momento de entender sua demanda e combinar os próximos passos, sem compromisso de continuar.</p>
-        </div>
-        <div class="step">
-          <h3>Acompanhamento</h3>
-          <p>A partir daí, seguimos com sessões semanais de 50 minutos, em um horário fixo reservado para você.</p>
+        <div class="steps steps-stack">
+          <div class="step">
+            <h3>Primeiro contato</h3>
+            <p>Você me envia uma mensagem no WhatsApp. Conversamos sobre o que está buscando e eu explico como funciona a terapia.</p>
+          </div>
+          <div class="step">
+            <h3>Sessão inicial</h3>
+            <p>Nos encontramos por vídeo para nos conhecermos. É o momento de entender sua demanda e combinar os próximos passos, sem compromisso de continuar.</p>
+          </div>
+          <div class="step">
+            <h3>Acompanhamento</h3>
+            <p>A partir daí, seguimos com sessões semanais de 50 minutos, em um horário fixo reservado para você.</p>
+          </div>
         </div>
       </div>
     </div>
